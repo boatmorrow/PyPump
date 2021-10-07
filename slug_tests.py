@@ -54,7 +54,7 @@ def horslev_residual(params,s_obs,t,D=1,S=1,L=1,R=1,F=2,error_perc=0.10,show_int
     s_mod = horslev(K,t,D=D,S=S,L=L,R=R,F=F)
     residual = (s_obs-s_mod)/(s_obs*error_perc)
     if show_interim_results:
-        print 'K = '+ str(K), 'res = ' + str(N.linalg.norm(residual))
+        print('K = '+ str(K), 'res = ' + str(N.linalg.norm(residual)))
         figure()
         loglog(t,s_obs,'ro',label='data')
         plot(t,s_mod,label='estimated')
