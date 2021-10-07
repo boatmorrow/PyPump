@@ -1,0 +1,6 @@
+PyPump is a suite of utilities for interpreting slug and pump tests using python. 
+    PyPump requires lmfit, pandas, scipy, numpy, and matplotlib.  
+    PyPump contains some utlitity to read csv data files from solisnt transducers and create python pickle objects.
+    PyPump is offered as is, with lots of utility yet to be added.
+
+Written by: W. Payton Gardner - University of Montana 
