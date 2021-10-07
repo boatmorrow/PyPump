@@ -73,7 +73,6 @@ H_f = horslev(out.x[0],t,D=D,S=S,L=L,R=R,F=F)
 d_mod_f = H_f*d[0]
 
 #visualize the solution
-pdb.set_trace()
 plot(t,H_t,'ro',label='observed')
 semilogy(t,H_f,label='modeled')
 xlabel('time (s)')
