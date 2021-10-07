@@ -11,7 +11,7 @@ import datetime as dt
 import pickle as p
 import pdb
 
-df = pd.read_csv('MDOT1.csv',skiprows=11,header=0,parse_dates=[['Date','Time']])
+df = pd.read_csv('MDOT1.csv',skiprows=11,header=0,parse_dates=[['Date','Time']],encoding='cp932')
 
 
 f = open('MDOT1.pkl','wb')
