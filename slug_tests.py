@@ -205,7 +205,7 @@ def FastBouer_residual(params,Td,H_obs,error_perc=0.05,show_interim_results=Fals
         print('td_scal = ' +str(Td_scalar))
         figure()
         plot(Td,H_obs,'ro',mec='k',label='data')
-        plot(Td,H_mod,label='estimated')
+        plot(Td,H_mod,'bo-',label='estimated')
         show()
     return residual
     
