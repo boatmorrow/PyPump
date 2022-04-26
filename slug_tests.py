@@ -163,7 +163,7 @@ def get_Le(ls,lp,lr,rs,rp,rr):
     return le
 
 def CalcFastBouerTd(t,ls,lp,lr,rs,rp,rr):
-    '''Calculate Le and initial dimensional time given well configuration:
+    '''Not Sure this the best way to go.  Calculate Le and initial dimensional time given well configuration:
             ls=tested screen section
             lp=upper packer access pipe section
             lr=riser pipe section
@@ -178,7 +178,6 @@ def CalcFastBouerTd(t,ls,lp,lr,rs,rp,rr):
    
 def FastBouer(Cd,t_d):
     '''returns dimensionless drawdown H_t for all dimensionless times td, and the given Cd.  From KGS online paper.'''    
-    #pdb.set_trace()
     g=9.81
     omega_d=np.abs(1-(Cd/2.)**2)**0.5
     omega_d_plus=(-Cd/2.)+omega_d
@@ -239,7 +238,7 @@ def get_FastBouer_K_unconfined(t,td,Cd,ls,HA,lw,rw,rc):
     LeRw = N.log10(ls/rw)
     (A,B,C) = br_linterp(LeRw)
 
-    if lw == HA:
+    if lw >= HA:
         LRr = (1.1/N.log(lw/rw)+C/(ls/rw))**-1
     else:
         LRr = (1.1/N.log(lw/rw) + (A+B*N.log((HA-lw)/rw))/(ls/rw))**-1
